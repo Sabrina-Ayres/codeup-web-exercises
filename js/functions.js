@@ -27,7 +27,7 @@ function sayHello(name){
 sayHello("Sabrina")
 var helloMessage = sayHello("Sabrina");
 
-console.log(helloMessage)
+console.log(helloMessage);
 
 
 
@@ -73,8 +73,8 @@ function isTwo(number){
 }
 
 isTwo(random);
-
-console.log(isTwo(random))
+console.log(random);
+console.log(isTwo(random));
 
 
 
@@ -91,13 +91,15 @@ console.log(isTwo(random))
  */
 
 var billTotal = prompt("What is the total on your bill?");
-var tipPercentage = prompt("What percentage would you like to tip?");
+var tipPercentage = (prompt("What percentage would you like to tip?")) / 100;
+var tipAmount = tipPercentage * billTotal;
 
 function calculateTip(tipPercentage, billTotal){
-    var tipAmount = tipPercentage * billTotal;
-    var tipMessage = "Your tip should be " + tipAmount;
-    alert (tipMessage);
+    var messageTip = "Your tip amount should be " + tipAmount;
+    alert(messageTip);
 }
+
+calculateTip();
 
 
 
@@ -119,8 +121,20 @@ function calculateTip(tipPercentage, billTotal){
  *
  * Example:
  * > var originalPrice = 100;
- * > var dicountPercent = .2; // 20%
- * > applyDiscount(originalPrice, dicountPercent) // 80
+ * > var discountPercent = .2; // 20%
+ * > applyDiscount(originalPrice, discountPercent) // 80
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+var originalPrice = prompt("What is the original price of the item?");
+var discountPercent = prompt("What is the discount percentage?");
+var discountedPrice = originalPrice - (originalPrice * discountPercent);
+
+function applyDiscount(originalPrice, discountPercent){
+    var newPrice = "The price with discount is " + discountedPrice;
+    alert(newPrice);
+}
+
+applyDiscount();
+
