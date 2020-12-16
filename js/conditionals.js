@@ -88,6 +88,7 @@ switch(color) {
 
 var userColor = prompt("What color are you thinking of?");
 alert(analyzeColor(userColor));
+
 // function analyzeColor(userColor){
 //     if (userColor === "blue"){
 //         alert (userColor + " is a color of the Cowboys.");
@@ -123,6 +124,27 @@ alert(analyzeColor(userColor));
  * return value.
  */
 
+// var luckyNumber = Math.floor(Math.random() * Math.floor(6));
+// var totalAmount = prompt("What is your total amount?");
+
+function calculateTotal (luckyNumber, totalAmount){
+    if (luckyNumber === 1) {
+        return ("$" + (totalAmount * 0.90) + " is your new price!");
+    } else if (luckyNumber === 2){
+        return ("$" + (totalAmount * 0.75) + " is your new price!");
+    } else if (luckyNumber === 3){
+        return ("$" + (totalAmount * 0.65) + " is your new price!");
+    } else if (luckyNumber === 4){
+        return ("$" + (totalAmount * 0.50) + " is your new price!");
+    } else if (luckyNumber === 5){
+        return ("....Congrats! You get it all for free!");
+    } else {
+        return ("....Sorry! You pay full price!");
+    }
+}
+
+console.log(calculateTotal(4,100));
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -131,7 +153,12 @@ alert(analyzeColor(userColor));
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+var totalAmount = prompt("What is your total amount?");
+
+alert("Your lucky number is " + luckyNumber + "!");
+alert("Your total price before your discount was $" + totalAmount + ".");
+alert("Your new total with your discount is $" + calculateTotal() + "!");
 
 /**
  * TODO:
