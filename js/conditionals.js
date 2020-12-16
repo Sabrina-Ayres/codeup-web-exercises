@@ -158,7 +158,7 @@ var totalAmount = prompt("What is your total amount?");
 
 alert("Your lucky number is " + luckyNumber + "!");
 alert("Your total price before your discount was $" + totalAmount + ".");
-alert("Your new total with your discount is $" + calculateTotal() + "!");
+alert(calculateTotal(luckyNumber, totalAmount) + "!");
 
 /**
  * TODO:
@@ -176,3 +176,13 @@ alert("Your new total with your discount is $" + calculateTotal() + "!");
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+var confirmed = confirm("Would you like to enter a number?");
+
+// function confirmed(){
+//     if () {
+//         prompt("Enter a number now.");
+//     } else {
+//         alert("That's no fun!");
+//     }
+// }
