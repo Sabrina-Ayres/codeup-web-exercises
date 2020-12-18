@@ -78,3 +78,22 @@ function getSmallerSegment(string, number){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
