@@ -75,7 +75,6 @@ switch(color) {
         console.log("The 'C' in CYMK is " + color + ".");
     default:
         console.log("That is not what I was expecting...");
-        break;
 }
 
 
@@ -88,18 +87,6 @@ switch(color) {
 
 var userColor = prompt("What color are you thinking of?");
 alert(analyzeColor(userColor));
-
-// function analyzeColor(userColor){
-//     if (userColor === "blue"){
-//         alert (userColor + " is a color of the Cowboys.");
-//     } else if (userColor === "red"){
-//         alert ("Raspberries are " + userColor + ".");
-//     } else if (userColor === "cyan"){
-//         alert ("The 'C' in CYMK is " + userColor + ".");
-//     } else {
-//         alert ("That is not a color I was prepared for...");
-//     }
-// }
 
 
 /* ########################################################################## */
@@ -177,12 +164,32 @@ alert(calculateTotal(luckyNumber, totalAmount) + "!");
  * HINT: The way we prompt for a value could be improved
  */
 
-var confirmed = confirm("Would you like to enter a number?");
+var numberEnteredByUser = confirm("Would you like to enter a number?");
 
-// function confirmed(){
-//     if () {
-//         prompt("Enter a number now.");
-//     } else {
-//         alert("That's no fun!");
-//     }
-// }
+function isANumber(input){
+    return !isNaN(input);
+}
+
+function evenOddMessage(number) {
+    return (number % 2 === 0) ? "The number you entered is even." : "The number you entered is odd.";
+}
+
+function numberPlusOneHundred(number){
+    return number + " plus 100 is " + (number + 100);
+}
+
+function negativeOrPositive(number) {
+    return (number > 0) ? "Number is negative" : "Number is positive";
+}
+
+
+    if (numberEnteredByUser) {
+        var userNumber = parseFloat(prompt("Enter a number meow"));
+        if (isANumber(userNumber)){
+            alert(evenOddMessage(userNumber));
+            alert(numberPlusOneHundred(userNumber));
+            alert(negativeOrPositive(userNumber));
+        } else {
+            alert("That is not a number!");
+        }
+}
