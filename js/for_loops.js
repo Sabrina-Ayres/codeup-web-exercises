@@ -27,17 +27,9 @@ for (var i = 0; i < 10; i++) {
 
 ///////////////////////////////////
 
-// function numberPyramid(){
-//     var totalNumberOfRows = 9;
-//     var arr = new Array();
-//     for (var i = 1; i <= totalNumberOfRows; i++) {
-//         for (var j = 1; j <= i; j++) {
-//             arr.push(j);
-//             console.log(j);
-//         }
-//         console.log("\n");
-//     }
-// }
+for (var i = 1; i <= 9; i++) {
+    console.log(String(i).repeat(i));
+}
 
 //////////////////////////////////
 
