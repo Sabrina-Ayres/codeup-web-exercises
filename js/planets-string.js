@@ -32,7 +32,7 @@
    var list = '<ul>' + planetsArray.map(function (planetsArray) {
         return '<li>' + planetsArray + '</li>';
     }).join('') + '/ul>';
-    //document.write(list);
+    document.write(list);
     console.log(list);
 
 })();
