@@ -67,10 +67,47 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-    // var books = [
-    //     {
-    //         title: ""}
-    // ]
+
+    var books = [
+        {
+            title: "Troubled Blood",
+            author: {
+                firstName: "Robert",
+                lastName: "Galbraith",
+            }
+        },
+        {
+            title: "The Girl With The Dragon Tattoo",
+            author: {
+                firstName: "Stieg",
+                lastName: "Larsson",
+            }
+        },
+        {
+            title: "Educated",
+            author: {
+                firstName: "Tara",
+                lastName: "Westover",
+            }
+        },
+        {
+            title: "The Invisible Life of Addie LaRue",
+            author: {
+                firstName: "V. E.",
+                lastName: "Schwab",
+            }
+        },
+        {
+            title: "Anxious People",
+            author: {
+                firstName: "Fredrik",
+                lastName: "Backman",
+            }
+        },
+    ]
+
+    //console.log(books[0].author.firstName);
+    //console.log(books[3].author.firstName);
 
     /**
      * TODO:
