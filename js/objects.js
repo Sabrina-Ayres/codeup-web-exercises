@@ -134,6 +134,10 @@
      *      ...
      */
 
+    for (var i = 0; i < books.length; i += 1){
+        console.log(books[i]);
+    }
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
