@@ -48,11 +48,25 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    var total = shoppers.amount;
+
+    function discount(total){
+        if (total > 200) {
+            return total - (total * .12);
+        } else {
+            return total;
+        }
+    }
+
+    for (var i = 0; i < shoppers.length; i += 1){
+        console.log(shoppers[i].name + "'s original total was $" + shoppers[i].amount + ", his new total is $" + discount(shoppers[i].amount.toFixed(2)) + ".");
+    }
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -148,6 +162,25 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+var createBook = function(bookTitle, authorFirst, authorLast) {
+    var book = {}
+    book.title = bookTitle;
+    book.author = {}
+    book.author.firstName = authorFirst;
+    book.author.lastName = authorLast;
+    return book
+}
+
+var showBookInfo = function (book) {
+    console.log("Book Title: " + book.title);
+    console.log("Author: " + book.author.firstName + " " + book.author.lastName);
+}
+
+
+books.push(createBook("Untamed", "Glennon", "Doyle"));
+books.forEach(showBookInfo);
+
 
 })();
 
