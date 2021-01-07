@@ -56,6 +56,10 @@
 
     var total = shoppers.amount;
 
+    function displayCurrency(amount){
+        return "$" + amount.toFixed(2);
+    }
+
     function discount(total){
         if (total > 200) {
             return total - (total * .12);
@@ -65,7 +69,8 @@
     }
 
     for (var i = 0; i < shoppers.length; i += 1){
-        console.log(shoppers[i].name + "'s original total was $" + shoppers[i].amount + ", his new total is $" + discount(shoppers[i].amount.toFixed(2)) + ".");
+        console.log(shoppers[i].name + "'s original total was " + displayCurrency(shoppers[i].amount) + ", his new total is " +
+            displayCurrency(discount(shoppers[i].amount)) + ".");
     }
 
     /** TODO:
