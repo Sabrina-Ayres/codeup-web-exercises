@@ -1,0 +1,74 @@
+/* A font stack is a list of fonts and font keywords used to tell a browser
+preferred fonts and fallback fonts.
+A fallback font is a font that is relied on next in the font stack,
+should the preferred font. */
+/* A font stack is created by using the "font-family" property. */
+.fontStack {
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+/* It is recommended, when choosing a font stack, to pay attention to the scale of the
+fonts and to include a
+generic font as a fallback. In the event a browser doesn't support any fonts,
+the website's typography won't be affected. */
+
+
+/*
+
+Serif is a slight projection finishing off stroke of a letter within a certain font or
+family of fonts.
+It gives letters and numbers a visual style.
+
+Sans-serif in typography is a letter form that does not have extending features
+called serifs at the end of strokes. Typically viewed as more modern or minimalist.
+
+
+*/
+
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.sans {
+    font-family: "Avenir Next";
+}
+
+.serif {
+    font-family: Didot;
+}
+
+
+
+/*We can find more about the fonts used through code inspection:
+
+- If you are using Google Chrome, right click on the mystery text, select Inspect. DevTools pops up,
+make sure you are on the Styles tab and head to the Font-Family attributes to learn more about the fonts.
+
+- If you are using Firefox, right click the text, select Inspect Element. Their inspector pops up,
+now head to the convenient Fonts tab for the info you need.
+
+- If you are using Safari, make sure the Developer menu is visible by checking the box at the bottom of the
+Advanced tab of Safari preferences. Now right click the text, select Inspect Element. Open up the details sidebar
+if it’s closed and select the Styles – Computed option. The font-family section will present the font info within
+the style attributes. */
+
+#1 {
+    color: aqua;
+}
+#2 {
+    font-family: "Times New Roman", Times, Serif;
+}
+#3 {
+    font-family: Helvetica, Arial, Sans-Serif;
+}
+#4 {
+    font-family: "Courier New", Monospace;
+}
+
+/* rem and em units are computed into pixel values by the browser,
+based on font sizes in your design.
+em units are based on the font size of the element they're used on. rem units are
+based on the font
+size of the html element. ...
+Use rem units unless you're sure you need em units, including on font sizes.*/
