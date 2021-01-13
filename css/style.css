@@ -20,8 +20,11 @@ h1 {
 }
 
 h2 {
-    color: #4A5759;
-    text-decoration: underline;
+    color: #0A0F35;
+    font-family: "Noto Sans JP";
+    font-size: 36px;
+    text-align: center;
+    margin-top: 6em;
 }
 
 h3 {
@@ -37,8 +40,8 @@ img {
     object-fit: contain;
 }
 
-table {
-    margin-top: 15em;
+.table_top {
+    margin-top: 30em;
 }
 
 #opacity {
@@ -77,7 +80,9 @@ p {
 
 #table_container {
     margin: 100px auto;
-    margin-top: 10em;
+    margin-top: 15em;
+    display: table;
+    table-layout: fixed;
     width: 100%;
     padding: 10px;
 }
@@ -93,8 +98,50 @@ td>ul {
     font-family: "Noto Sans JP";
     font-size: 18px;
     color: #0A0F35;
+    margin-top: 2px;
+    margin-left: 10px;
 }
 
 .center {
     text-align: center;
+}
+
+.table_width {
+    width: 800px;
+}
+
+.table_info {
+    padding: 7px 10px 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th {
+   text-transform: uppercase;
+    letter-spacing: 1em;
+    font-size: 90%;
+    border-bottom: 2px solid #111111;
+    border-top: 1px solid #999;
+    text-align: center;
+}
+
+tr.even {
+    background-color: #efefef;
+}
+
+tr:hover {
+    background-color: #c3e6e5;
+}
+
+.money {
+    text-align: right;
+}
+
+.table-bottom {
+    margin-bottom: 10em;
+}
+
+a {
+    margin-right: auto;
+    margin-left: auto;
 }
