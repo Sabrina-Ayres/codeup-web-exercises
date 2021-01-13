@@ -24,7 +24,7 @@ h2 {
     font-family: "Noto Sans JP";
     font-size: 36px;
     text-align: center;
-    margin-top: 6em;
+    margin-top: 5em;
 }
 
 h3 {
@@ -142,6 +142,6 @@ tr:hover {
 }
 
 a {
-    margin-right: auto;
-    margin-left: auto;
+    display:block;
+    text-align:center;
 }
