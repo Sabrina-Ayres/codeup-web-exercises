@@ -107,7 +107,7 @@ a {
     width: 100%;
     background-color: var(--light-bg);
     border-bottom-color: var(--separator-color);
-    border-bottom: 1px;
+    margin: 1px;
     padding: .5em;
     display: flex;
     align-items: flex-start;
