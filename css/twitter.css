@@ -106,8 +106,7 @@ a {
 .media {
     width: 100%;
     background-color: var(--light-bg);
-    border-bottom-color: var(--separator-color);
-    margin: 1px;
+    border-bottom: solid 1px var(--separator-color);
     padding: .5em;
     display: flex;
     align-items: flex-start;
@@ -120,7 +119,7 @@ a {
 }
 
 .media-body {
-    width: calc(100% - 1.33em);
+    width: calc(100% - 50px);
 
 }
 
