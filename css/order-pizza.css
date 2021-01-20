@@ -1,0 +1,21 @@
+.container-ad {
+    position: relative;
+    text-align: center;
+    color: black;
+    margin-top: 1em;
+    padding: 1em;
+    background-color: white;
+}
+
+h1 {
+    color: black;
+    opacity: 60%;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 40%;
+}
+
+.space {
+    padding: 1em;
+}

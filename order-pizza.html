@@ -33,73 +33,144 @@
     </span>¬
     </div>
 </nav>
+
 <div class="container">
-    <div class="jumbotron">
-        <h1 class="display-4">Welcome to Pizza World!</h1>
+
+    <div class="jumbotron container-ad">
+        <h1 class="display-4 centered">Welcome to Pizza World!</h1>
         <img src="IMG/pizza.png" class="img-fluid" alt="Pizza">
         <!--    <hr class="my-4">-->
     </div>
+
     <h2>Build your own pizza!</h2>
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-            <a class="nav-link active" href="#"><span class="badge badge-light">1</span> Size and crust</a>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="size-tab" data-toggle="tab" href="#size" role="tab"><span
+                    class="badge badge-light">1</span> Size and crust</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#"><span class="badge badge-light">2</span> Cheese and Sauce</a>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="cheese-tab" data-toggle="tab" href="#cheese" role="tab"><span
+                    class="badge badge-light">2</span> Cheese and Sauce</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#"><span class="badge badge-light">3</span> Toppings</a>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="toppings-tab" data-toggle="tab" href="#toppings" role="tab"
+               aria-controls="toppings"
+               aria-selected="false"><span class="badge badge-light">3</span> Toppings</a>
         </li>
     </ul>
-    <div class="card">
-        <div class="card-header">
-            Choose size and crust
-        </div>
-        <div class="card-body">
-            <div class="card" style="width: 100%;">
-                <div class="card-header">
-                    Hand Tossed
-                </div>
-                <h6>Garlic seasoned crust with a rich, buttery taste.</h6>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        Small (10")
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Medium (12")
-                    </label>
+
+    <div class="card tab-content">
+        <div class="tab-pane active" id="size" role="tabpanel" aria-labelledby="size-tab">
+            <div class="card-header d-block p-2 bg-primary text-white">
+                Choose size and crust
+            </div>
+            <div class="card-body">
+                <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                        Hand Tossed
+                    </div>
+                    <h6>Garlic seasoned crust with a rich, buttery taste.</h6>
+                    <div class="form-check space">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                               value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                            Small (10")
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                               value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                            Medium (12")
+                        </label>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card-body">
-            <div class="card" style="width: 100%;">
-                <div class="card-header">
-                    Crispy Thin
-                </div>
-                <h6>Thin enough for optimum crispy to crunchy ratio.</h6>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        Medium (12")
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Large (14")
-                    </label>
+            <div class="card-body">
+                <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                        Crispy Thin
+                    </div>
+                    <h6>Thin enough for optimum crispy to crunchy ratio.</h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                               value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                            Medium (12")
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                               value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                            Large (14")
+                        </label>
+                    </div>
                 </div>
             </div>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
 
+<!--    <div>-->
+<!--        <div class="card">-->
+<!--            <div class="card-header">-->
+<!--                Choose size and crust-->
+<!--            </div>-->
+<!--            <div class="card-body">-->
+<!--                <div class="card" style="width: 100%;">-->
+<!--                    <div class="card-header">-->
+<!--                        Hand Tossed-->
+<!--                    </div>-->
+<!--                    <h6>Garlic seasoned crust with a rich, buttery taste.</h6>-->
+<!--                    <div class="form-check">-->
+<!--                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"-->
+<!--                               value="option1" checked>-->
+<!--                        <label class="form-check-label" for="exampleRadios1">-->
+<!--                            Small (10")-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div class="form-check">-->
+<!--                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"-->
+<!--                               value="option2">-->
+<!--                        <label class="form-check-label" for="exampleRadios2">-->
+<!--                            Medium (12")-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="card-body">-->
+<!--                <div class="card" style="width: 100%;">-->
+<!--                    <div class="card-header">-->
+<!--                        Crispy Thin-->
+<!--                    </div>-->
+<!--                    <h6>Thin enough for optimum crispy to crunchy ratio.</h6>-->
+<!--                    <div class="form-check">-->
+<!--                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"-->
+<!--                               value="option1" checked>-->
+<!--                        <label class="form-check-label" for="exampleRadios1">-->
+<!--                            Medium (12")-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                    <div class="form-check">-->
+<!--                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"-->
+<!--                               value="option2">-->
+<!--                        <label class="form-check-label" for="exampleRadios2">-->
+<!--                            Large (14")-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
 </div>
 
+<!--<script>-->
+<!--    $(function () {-->
+<!--        $('#myTab li:last-child a').tab('show')-->
+<!--    })-->
+<!--</script>-->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
