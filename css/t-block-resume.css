@@ -1,0 +1,30 @@
+
+
+body {
+    background-color: #F3F3F3;
+}
+
+.backgrounds {
+    margin-top: 3px;
+    background-color: white;
+}
+
+h1 {
+    font-family: 'Poiret One', serif;
+    color: #262626;
+    text-align: center;
+    margin: .5em;
+}
+
+h2 {
+    text-align: center;
+    margin: .5em;
+}
+
+hr {
+    max-width: 5em;
+}
+
+.container {
+    padding: 2em;
+}
