@@ -138,3 +138,5 @@ function applyDiscount(originalPrice, discountPercent){
 
 applyDiscount();
 
+
+
