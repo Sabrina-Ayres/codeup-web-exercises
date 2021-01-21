@@ -16,6 +16,12 @@ h1 {
     top: 40%;
 }
 
-.space {
-    padding: 1em;
+li {
+    margin-left: 1em;
 }
+
+.next {
+    margin-right: 1em !important;
+    width: 8em;
+}
+
