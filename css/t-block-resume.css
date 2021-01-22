@@ -25,7 +25,7 @@ h1 {
     font-family: 'Lora', serif;
     color: #262626;
     font-size: 80px;
-    letter-spacing: 4px;
+    letter-spacing: 6px;
     text-align: center;
     margin: .5em;
 }
@@ -60,6 +60,10 @@ h3 {
 
 .space-bottom {
     padding-bottom: .5em;
+}
+
+.left-space {
+    margin-left: 1em;
 }
 
 hr {
