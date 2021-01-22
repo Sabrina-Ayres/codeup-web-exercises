@@ -1,7 +1,13 @@
-
+@font-face {
+    font-family: 'Karla', sans-serif;
+    font-family: 'Lora', serif;
+    src: url("https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Lora&display=swap");
+}
 
 body {
     background-color: #F3F3F3;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
 }
 
 .backgrounds {
@@ -9,20 +15,56 @@ body {
     background-color: white;
 }
 
+.box {
+    background-color: white;
+    height: 5em;
+    width: 100%;
+}
+
 h1 {
-    font-family: 'Poiret One', serif;
+    font-family: 'Lora', serif;
     color: #262626;
+    font-size: 80px;
+    letter-spacing: 4px;
     text-align: center;
     margin: .5em;
 }
 
 h2 {
+    color: #262626;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     text-align: center;
-    margin: .5em;
+    margin-top: .5em;
+    padding-top: .5em;
+}
+
+h3 {
+    color: #262626;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: .5em;
+    padding-top: .5em;
+}
+
+.center {
+    text-align: center;
+}
+
+.space-top {
+    padding-top: .5em;
+}
+
+.space-bottom {
+    padding-bottom: .5em;
 }
 
 hr {
     max-width: 5em;
+    color: #262626;
 }
 
 .container {
