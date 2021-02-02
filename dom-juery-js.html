@@ -59,17 +59,21 @@
 
         // TODO: Set the text color of subHeader to blue
 
+        
         var third = function() {
             subHeader.style.color = 'blue';
         }
 
         document.getElementById('btn3').addEventListener('click', third);
 
+
         // TODO: Uncomment the next line and get all list items
 
         var listItems = document.getElementsByTagName('li');
 
+
         // TODO: Set text color on every other list item to grey
+
 
         var last = function() {
             for (var i = 0; i < listItems.length; i = i+2) {
@@ -79,6 +83,7 @@
 
         document.getElementById('last').addEventListener('click', last);
 
+
         // TODO: Set text color of li with dbid = 1 to blue
 
         listItems[0].style.color = 'blue';
@@ -87,7 +92,9 @@
 
         var subParagraphs = Array.from(document.getElementsByClassName('sub-paragraph'));
 
+
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+
 
         var second = function() {
             subParagraphs[0].innerHTML = 'Mission Accomplished!';
