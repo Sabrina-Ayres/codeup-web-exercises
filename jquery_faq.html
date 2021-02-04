@@ -15,6 +15,36 @@
 
 <h1>National Park Service FAQ</h1>
 
+<h3>Zion National Park</h3>
+<ul>
+    <li>1917 was the first year tourists arrived here by way of automobile.</li>
+    <li>The depth of Zion Canyon is around 800 meters.</li>
+    <li>Number of mammals living in the park: 79.</li>
+    <li> Coal Pits Wash is the park’s lowest point of elevation at 3,666 ft.</li>
+</ul>
+
+<h3>Yosemite National Park</h3>
+<ul>
+    <li>The park’s diverse landscape supports more than 400 species.</li>
+    <li>Yosemite’s granite rock formations glow like fire at sunset.</li>
+    <li>Yosemite is home to one of the tallest waterfalls in the world.</li>
+    <li>Yosemite might be our nation’s 3rd national park, but it
+        sparked the idea of national parks.</li>
+</ul>
+
+<h3 class="bold">Yellowstone National Park</h3>
+<ul>
+    <li>Yellowstone is the world’s first national park.</li>
+    <li>67 species of mammals, including seven species of native ungulates and
+        two species of bear.</li>
+    <li>Elevation: 7,733 feet above sea level</li>
+    <li>Larger than Rhode Island and Delaware combined.</li>
+</ul>
+
+
+
+
+<h3>Additional FAQs</h3>
 <dl>
     <dt>Who is the director of the National Park Service?</dt>
     <dd>Shawn Benge, Deputy Director, Operations, is exercising the delegated
@@ -79,6 +109,24 @@
             $('dd').toggleClass('invisible');
         });
     });
+
+    let changeBackground = $('ul');
+    let handler = function(e){
+        $('li').last().css('background-color', 'yellow');
+    }
+    changeBackground.click(handler);
+
+    let bolder = $('h3');
+    let handle = function(e){
+        $('ul').children().css('font-weight', 'bold');
+    }
+    bolder.click(handle);
+
+    let blueFont = $('li');
+    let hand = function(e){
+        $('li').first().css('color', 'blue');
+    }
+    blueFont.click(hand);
 
 </script>
 </body>
