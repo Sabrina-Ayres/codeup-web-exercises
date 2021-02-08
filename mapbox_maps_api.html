@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.0/mapbox-gl.css' rel='stylesheet'/>
+
+</head>
+<body>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+<link
+        rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"
+        type="text/css"
+/>
+
+<div id='map' style='width: 600px; height: 400px; margin: 15vh auto;'></div>
+<script src="js/keys.js"></script>
+<script>
+
+    mapboxgl.accessToken = mapboxToken;
+    var map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.4936, 29.4700], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+    });
+
+    function geocode(search, token) {
+        var baseUrl = 'https://api.mapbox.com';
+        var endPoint = '/geocoding/v5/mapbox.places/';
+        return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+            .then(function(res) {
+                return res.json();
+                // to get all the data from the request, comment out the following three lines...
+            }).then(function(data) {
+                return data.features[0].center;
+            });
+    }
+
+    var resturants = [
+        {
+            name: "Piranha Izakaya",
+            address: "260 E Basse Rd, San Antonio, TX 78209",
+            latLong: [-98.47908, 29.494324],
+            cuisine: [
+                "Ramen",
+                "Sushi Bars",
+                "Cocktail Bars"
+            ],
+            price: "$$"
+        }, {
+            name: "La Tuna Icehouse & Grill",
+            address: "100 Probandt St, San Antonio, TX 78204",
+            latLong: [-98.496209, 29.407782],
+            cuisine: [
+                "American (Traditional)",
+                "Seafood",
+                "Sandwiches"
+            ],
+            price: "$$"
+        }, {
+            name: "Anchor Bar",
+            address: "4553 N Loop 1604 W, San Antonio, TX 78249",
+            latLong: [-98.58669, 29.59203],
+            cuisine: [
+                "Wings",
+                "American (Traditional)",
+                "Bar"
+            ],
+            price: "$$"
+        },
+    ]
+
+    var nav = new mapboxgl.NavigationControl();
+    map.addControl(nav, 'bottom-right');
+
+    geocode(resturants[0].address, mapboxToken).then(function (data) {
+        console.log(data);
+    })
+    geocode(resturants[1].address, mapboxToken).then(function (data) {
+        console.log(data);
+    })
+    geocode(resturants[2].address, mapboxToken).then(function (data) {
+        console.log(data);
+    })
+
+
+    resturants.forEach(function(resturant) {
+        let popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
+        '<h3>' + resturant.name + '</h3>' +
+        '<p>' + resturant.address + '</p>' +
+        '<p>' + resturant.cuisine + '</p>' +
+        '<p>' + resturant.price + '</p>');
+        let marker = new mapboxgl.Marker()
+            .setLngLat(resturant.latLong)
+            .setPopup(popup)
+            .addTo(map);
+        })
+
+
+    map.addControl(
+        new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            mapboxgl: mapboxgl
+        })
+        );
+
+
+
+    // map.on('click', function (e) {
+    //     marker.remove();
+    // })
+
+
+    // var popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
+    //     eat );
+
+    // var ramenMarker = new mapboxgl.Marker()
+    //     .setLngLat([-98.47908, 29.494324])
+    //     .setPopup(popup)
+    //     .addTo(map);
+    //
+    // var seafoodMarker =  new mapboxgl.Marker()
+    //     .setLngLat([-98.496209, 29.407782])
+    //     .setPopup(popup)
+    //     .addTo(map);
+    //
+    // var wingMarker = new mapboxgl.Marker()
+    //     .setLngLat([-98.58669, 29.59203])
+    //     .setPopup(popup)
+    //     .addTo(map);
+
+</script>
+
+</body>
+</html>
