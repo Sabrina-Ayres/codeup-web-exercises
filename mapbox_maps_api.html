@@ -39,15 +39,15 @@
             });
     }
 
-    var resturants = [
+    let resturants = [
         {
             name: "Piranha Izakaya",
             address: "260 E Basse Rd, San Antonio, TX 78209",
             latLong: [-98.47908, 29.494324],
             cuisine: [
                 "Ramen",
-                "Sushi Bars",
-                "Cocktail Bars"
+                " Sushi Bars",
+                " Cocktail Bars"
             ],
             price: "$$"
         }, {
@@ -56,8 +56,8 @@
             latLong: [-98.496209, 29.407782],
             cuisine: [
                 "American (Traditional)",
-                "Seafood",
-                "Sandwiches"
+                " Seafood",
+                " Sandwiches"
             ],
             price: "$$"
         }, {
@@ -66,14 +66,14 @@
             latLong: [-98.58669, 29.59203],
             cuisine: [
                 "Wings",
-                "American (Traditional)",
-                "Bar"
+                " American (Traditional)",
+                " Bar"
             ],
             price: "$$"
         },
     ]
 
-    var nav = new mapboxgl.NavigationControl();
+    let nav = new mapboxgl.NavigationControl();
     map.addControl(nav, 'bottom-right');
 
     geocode(resturants[0].address, mapboxToken).then(function (data) {
