@@ -1,0 +1,29 @@
+
+body {
+    background-color: #242D38;
+}
+
+.nav_design {
+    background-color: #242D38;
+    color: white;
+    font-size: 3em;
+}
+
+.car_bkgd {
+    background-color: #E6EAEF;
+    border: 2px solid #87A330;
+}
+
+.list_d {
+    list-style: none;
+    font-size: .8em;
+    margin-left: 1em;
+    padding-bottom: .8em;
+}
+
+.date_d {
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: .5em;
+}

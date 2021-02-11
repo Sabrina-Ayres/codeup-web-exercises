@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.0/mapbox-gl.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="css/weather_map.css">
+</head>
+<body>
+
+<header>
+
+    <nav class="navbar nav_design">
+        <span class="navbar mb-4">wx app</span>
+    </nav>
+
+</header>
+
+<main>
+
+    <section>
+
+        <div class="row d-flex justify-content-around m-5" id="days"></div>
+
+    </section>
+
+    <div id='map' style='width: 850px; height: 500px; margin: 15vh auto; border: solid 3px #87A330'></div>
+    <pre id="coordinates" class="coordinates"></pre>
+
+</main>
+
+
+<script src="js/jquery-3.5.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossOrigin="anonymous"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.0/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<script src="js/weather_map.js"></script>
+<script>
+
+
+    //     let longitude = -98.4936;
+    //     let latitude = 29.4700;
+    //     weather();
+    // function weather() {
+    //     $.get("http://api.openweathermap.org/data/2.5/onecall", {
+    //         APPID: WEATHER_MAP_TOKEN,
+    //         lat: latitude,
+    //         lon: longitude,
+    //         units: "imperial",
+    //         exclude: "minutely,hourly"
+    //     }).done(function (data) {
+    //         handleResponse(data)
+    //     });
+    // }
+
+    //
+    // function handleResponse(data) {
+    //     console.log(data);
+    //     let day = data.daily;
+    //     let html = " ";
+    //     for (let i = 0; i < 5; i++) {
+    //     let date = day[i].dt;
+    //     let dateCal = new Date (date * 1000);
+    //     let dateEng = dateCal.toLocaleDateString("en-US");
+    //     let wxIcon = day[i].weather[0].icon
+    //         let dayHtml = '<div class="card car_bkgd" style="width: 14rem;">'
+    //         dayHtml += '<div>' + dateEng + '</div>';
+    //         dayHtml += '<ul></ul>'
+    //         dayHtml += '<li <img src='http://openweathermap.org/img/w/' + wxIcon + '.png' + '</li>';
+    //         dayHtml += '<li class="list_d">' + day[i].temp.max + ' / ' + day[i].temp.min + '</li>';
+    //         dayHtml += '<li class="list_d">' + "Description: " + day[i].weather[0].description + '</li>';
+    //         dayHtml += '<li class="list_d">' + "Humidity: " + day[i].humidity + '</li>';
+    //         dayHtml += '<li class="list_d">' + "Wind: " + day[i].wind_speed + '</li>';
+    //         dayHtml += '<li class="list_d">' + "Pressure: " + day[i].pressure + '</li>';
+    //         dayHtml += '</div>';
+    //         html += dayHtml;
+    //     }
+    //     $('#days').html(html);
+    // }
+
+    // mapboxgl.accessToken = mapboxToken;
+    // let coordinates = document.getElementById('coordinates');
+    // let map = new mapboxgl.Map({
+    //     container: 'map', // container ID
+    //     style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    //     center: [longitude, latitude], // starting position [lng, lat]
+    //     zoom: 9 // starting zoom
+    // });
+    //
+    // let marker = new mapboxgl.Marker({
+    //     draggable: true
+    // })
+    //     .setLngLat([longitude, latitude])
+    //     .addTo(map);
+
+    // function onDragEnd() {
+    //     let lngLat = marker.getLngLat();
+    //     longitude = lngLat.lng;
+    //     latitude = lngLat.lat;
+    //     weather();
+    // }
+    //
+    // marker.on('dragend', onDragEnd);
+    //
+    // let nav = new mapboxgl.NavigationControl();
+    // map.addControl(nav, 'bottom-right');
+
+    // $.get("https://api.openweathermap.org/data/2.5/onecall?lat=29.4241&lon=-98.4936&units=imperial&exclude=minutely,hourly&appid=" + WEATHER_MAP_TOKEN).done(weather);
+
+</script>
+
+
+</body>
+</html>
+
