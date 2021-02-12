@@ -25,12 +25,12 @@ function handleResponse(data) {
         let date = day[i].dt;
         let dateCal = new Date (date * 1000);
         let dateEng = dateCal.toLocaleDateString("en-US");
-        let wxIcon = day[i].weather[0].icon
-        let dayHtml = '<div class="card car_bkgd" style="width: 14rem;">'
+        let weatherIcon = day[i].weather[0].icon;
+        let dayHtml = '<div class="card card_b" style="width: 14rem;">'
         dayHtml += '<div class="date_d">' + dateEng + '</div>';
         dayHtml += '<ul></ul>'
-        // dayHtml += '<li <img src='http://openweathermap.org/img/w/' + wxIcon + '.png' + '</li>';
-            dayHtml += '<li class="list_d">' + day[i].temp.max + ' / ' + day[i].temp.min + '</li>';
+        dayHtml += "<li class='list_d text-center m-2'>" + "<img src='https://openweathermap.org/img/w/" + weatherIcon + ".png'" + "</li>";
+        dayHtml += '<li class="list_d">' + day[i].temp.max + ' / ' + day[i].temp.min + '</li>';
         dayHtml += '<li class="list_d">' + "Description: " + day[i].weather[0].description + '</li>';
         dayHtml += '<li class="list_d">' + "Humidity: " + day[i].humidity + '</li>';
         dayHtml += '<li class="list_d">' + "Wind: " + day[i].wind_speed + '</li>';
@@ -67,6 +67,25 @@ marker.on('dragend', onDragEnd);
 
 let nav = new mapboxgl.NavigationControl();
 map.addControl(nav, 'bottom-right');
+
+function geocode(search, token) {
+    var baseUrl = 'https://api.mapbox.com';
+    var endPoint = '/geocoding/v5/mapbox.places/';
+    return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+        .then(function(res) {
+            return res.json();
+            // to get all the data from the request, comment out the following three lines...
+        }).then(function(data) {
+            return data.features[0].center;
+        });
+}
+
+map.addControl(
+    new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl
+    })
+    );
 
 // $.get("https://api.openweathermap.org/data/2.5/onecall?lat=29.4241&lon=-98.4936&units=imperial&exclude=minutely,hourly&appid=" + WEATHER_MAP_TOKEN).done(weather);
 
