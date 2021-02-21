@@ -33,9 +33,9 @@ const users = [
 // to the languages array
 // TODO: replace the `var` keyword with `const`, then try to reassign a variable
 // declared as `const`
-const name = 'your_name_here';
-const email = '';
-const languages = [];
+var name = 'your_name_here';
+var email = '';
+var languages = [];
 
 // TODO: rewrite the object literal using object property shorthand
 users.push({
@@ -45,8 +45,8 @@ users.push({
 });
 
 // TODO: replace `var` with `let` in the following variable declarations
-let  emails = [];
-let names = [];
+var emails = [];
+var names = [];
 
 // TODO: rewrite the following using arrow functions
 users.forEach(function(user) {
@@ -57,7 +57,7 @@ users.forEach(function(user) {
 });
 
 // TODO: replace `var` with `let` in the following declaration
-let developers = [];
+var developers = [];
 users.forEach(function(user) {
   // TODO: rewrite the code below to use object destructuring assignment
   //       note that you can also use destructuring assignment in the function
@@ -71,7 +71,7 @@ users.forEach(function(user) {
 });
 
 // TODO: Use `let` for the following variable
-let list = '<ul>';
+var list = '<ul>';
 
 // TODO: rewrite the following loop to use a for..of loop
 developers.forEach(function (developer) {
