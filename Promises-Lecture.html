@@ -164,7 +164,15 @@
         Log the text property of the first cat fact object. Be sure to log possible errors in a catch.
      */
 
-    // const catFactsURL = 'https://cat-fact.herokuapp.com/facts';
+    const catFactsURL = 'https://cat-fact.herokuapp.com/facts';
+
+    fetch(catFactsURL)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data[0].text);
+        })
+        .catch(console.error);
+
 
 
     // Fetch API POST example
@@ -189,7 +197,21 @@
         Experiment with sending different shapes of data in the body of the request.
      */
 
+    const config = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            username: "Sabrina Ayres",
+            user_age: "34",
+            user_occupation: "Student"
+        })
+    };
 
+fetch('https://hookb.in/ggR7VqzX8qfwWW1NZ3Jj', config)
+    .then(console.log)
+    .catch(console.error);
 
 
 
